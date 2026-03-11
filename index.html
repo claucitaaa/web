@@ -1,209 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>𝙉𝙪𝙚𝙨𝙩𝙧𝙖 𝙥𝙖𝙜𝙞𝙣𝙖 𝙬𝙚𝙗 ♥</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --azul: #5d7b93;
-            --rosa: #f4d3d9;
-            --rosaf: #e1b1b9;
-            --blanco: #ffffff;
-            --negro: #2d2d2d;
-            --glass-bg: rgba(255, 255, 255, 0.15);
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: url('foto.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: var(--negro);
-        }
-        .main-container {
-            display: flex;
-            gap: 40px;
-            padding: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            animation: fadeIn 1.2s ease-out;
-        }
-        .profile-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            width: 400px;
-            padding: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            position: relative;
-        }
-        .profile-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-        }
+<meta charset="UTF-8">
+<title>𝙉𝙪𝙚𝙨𝙩𝙧𝙖 𝙥𝙖𝙜𝙞𝙣𝙖 𝙬𝙚𝙗 ♥</title>
 
-        .card-p1 h2 { color: #d08a97; }
-        .card-p1 h3 { border-bottom: 2px solid var(--rosaf); }
-        .card-p1 th { background: var(--rosaf); color: white; }
-        .card-p1 .bio-data { background: rgba(244, 211, 217, 0.4); }
-        .card-p1 .badge { background: var(--rosa); color: #8a5a64; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .card-p2 h2 { color: var(--azul); }
-        .card-p2 h3 { border-bottom: 2px solid var(--azul); }
-        .card-p2 th { background: var(--azul); color: white; }
-        .card-p2 .bio-data { background: rgba(93, 123, 147, 0.2); }
-        .card-p2 .badge { background: var(--azul); color: white; }
+<style>
+body{
+font-family:Poppins;
+background:url(foto.jpg) center/cover fixed;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#2d2d2d;
+}
 
-        .header-section {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .profile-img {
-            width: 140px;
-            height: 180px;
-            border-radius: 15px;
-            object-fit: cover;
-            border: 3px solid var(--blanco-puro);
-            animation: float 4s ease-in-out infinite;
-        }
-        .bio-data {
-            flex: 1;
-            padding: 15px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-        }
+.contenedor{
+display:flex;
+gap:40px;
+padding:20px;
+flex-wrap:wrap;
+}
 
-        h2 { margin-top: 0; font-size: 1.2rem; }
-        h3 { color: var(--negro-suave); display: inline-block; }
+.tarjeta{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+width:400px;
+padding:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+transition:.4s;
+}
 
-        table {
-            width: 100%;
-            margin: 15px 0;
-            border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            overflow: hidden;
-        }
+.tarjeta:hover{
+transform:translateY(-10px) scale(1.02);
+}
 
-        th, td {
-            padding: 8px;
-            text-align: left;
-            font-size: 0.8rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+@keyframes flotar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
 
-        .lists-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 0.85rem;
-        }
-
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 5px; color: #444; }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .badge {
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-    </style>
+</style>
 </head>
+
 <body>
+<div class="contenedor">
+<div class="tarjeta">
+<span style="background:#f4d3d9;color:#8a5a64;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:bold;">BIENVENIDOS</span>
+<div style="display:flex;gap:15px;margin-top:15px;">
+<img src="clau.jpg" style="width:140px;height:180px;object-fit:cover;border-radius:15px;animation:flotar 4s infinite;">
+<div style="flex:1;padding:15px;border-radius:15px;background:rgba(244,211,217,.4);font-size:14px;">
+<h2 style="margin-top:0;color:#d08a97;">Claudia Maria Cruz Reyes</h2>
+<p><em>"Crear es expresar el alma sin usar palabras."</em></p>
+</div>
 
-<div class="main-container">
-    <div class="profile-card card-p1">
-        <span class="badge">BIENVENIDOS</span>
-        <div class="header-section">
-            <img src="clau.jpg" class="profile-img">
-            <div class="bio-data">
-                <h2>Claudia Maria Cruz Reyes</h2>
-                <p><i>"Crear es expresar el alma sin usar palabras."</i></p>
-            </div>
-        </div>
+</div>
+<table style="width:100%;margin-top:15px;border-collapse:collapse;background:rgba(255,255,255,.3);">
+<tr style="background:#e1b1b9;color:white;">
+<th style="padding:8px;">Dato</th>
+<th style="padding:8px;">Información</th>
+</tr>
+<tr>
+<td style="padding:8px;">💗 Nacimiento</td>
+<td style="padding:8px;">27 de Junio, 2009</td>
+</tr>
+<tr>
+<td style="padding:8px;">🍥 Edad</td>
+<td style="padding:8px;">16 años</td>
+</tr>
+<tr>
+<td style="padding:8px;">🌷 Ubicación</td>
+<td style="padding:8px;">Col. Satélite</td>
+</tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+<div>
+<h3 style="border-bottom:2px solid #e1b1b9;">Hobbies</h3>
+<ul>
+<li>Pintar y dibujar</li>
+<li>Comprar cosas</li>
+<li>Viajar</li>
+<li>Dormir mucho</li>
+<li>Jugar con mis gatos</li>
+<li>Decorar</li>
+</ul>
+</div>
+<div>
+<h3 style="border-bottom:2px solid #e1b1b9;">Mis Metas</h3>
+<ol>
+<li>Culminar estudios</li>
+<li>Éxito profesional</li>
+<li>Ayudar a mi familia</li>
+<li>Terminar mis kdramas</li>
+<li>Expresar mis entimientos en el arte</li>
+</ol>
+</div>
+</div>
+</div>
 
-        <table>
-            <tr><th>Dato</th><th>Información</th></tr>
-            <tr><td>Nacimiento</td><td>27 de Junio, 2009</td></tr>
-            <tr><td>Edad</td><td>16 años</td></tr>
-            <tr><td>Ubicación</td><td>Col. Satélite</td></tr>
-        </table>
+<div class="tarjeta">
+<span style="background:#5d7b93;color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:bold;">BIENVENIDOS</span>
+<div style="display:flex;gap:15px;margin-top:15px;">
+<img src="abi.jpg" style="width:140px;height:180px;object-fit:cover;border-radius:15px;animation:flotar 4s infinite;">
+<div style="flex:1;padding:15px;border-radius:15px;background:rgba(93,123,147,.2);font-size:14px;">
+<h2 style="margin-top:0;color:#5d7b93;">Astrid Abigail Aguilera Ramos</h2>
+<p><i>"Enfocada en el futuro y capturando el presente."</i></p>
+</div>
+</div>
+<table style="width:100%;margin-top:15px;border-collapse:collapse;background:rgba(255,255,255,.3);">
+<tr style="background:#5d7b93;color:white;">
+<th style="padding:8px;">Dato</th>
+<th style="padding:8px;">Información</th>
+</tr>
+<tr>
+<td style="padding:8px;">📩 Nacimiento</td>
+<td style="padding:8px;">20 Diciembre, 2008</td>
+</tr>
+<tr>
+<td style="padding:8px;">🌀 Edad</td>
+<td style="padding:8px;">17 años</td>
+</tr>
+<tr>
+<td style="padding:8px;">💤 Ubicación</td>
+<td style="padding:8px;">Col. Brisa del Carmen #2</td>
+</tr>
+</table>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+<div>
+<h3 style="border-bottom:2px solid #5d7b93;">Hobbies</h3>
+<ul>
+<li>Fotografía</li>
+<li>Música</li>
+<li>Ver Partidos</li>
+<li>Dormir</li>
+<li>Ver Peliculas</li>
+<li>Ver Series </li>
+</ul>
+</div>
+<div>
+<h3 style="border-bottom:2px solid #5d7b93;">Mis Metas</h3>
+<ol>
+<li>Graduarme</li>
+<li>Emprendimiento propio</li>
+<li>Independencia</li>
+<li>Darle lo mejor a mis padres</li>
+<li>Ser mejor persona</li>
+<li>Vivir experiencias</li>
+</ol>
 
-        <div class="lists-container">
-            <div>
-                <h3>Hobbies</h3>
-                <ul>
-                    <li>Pintar y dibujar</li>
-                    <li>Viajar</li>
-                    <li>Decorar</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Mis Metas</h3>
-                <ol>
-                    <li>Culminar estudios</li>
-                    <li>Éxito profesional</li>
-                    <li>Ayudar a mi familia</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <div class="profile-card card-p2">
-        <span class="badge">BIENVENIDOS</span>
-        <div class="header-section">
-            <img src="abi.jpg" alt="Astrid" class="profile-img">
-<div class="bio-data">
-                <h2>Astrid Aguilera</h2>
-                <p><i>"Enfocada en el futuro y capturando el presente."</i></p>
-            </div>
-        </div>
-
-        <table>
-            <tr><th>Dato</th><th>Información</th></tr>
-            <tr><td>Nacimiento</td><td>20 Diciembre, 2008</td></tr>
-            <tr><td>Edad</td><td>17 años</td></tr>
-            <tr><td>Ubicación</td><td>Col. Brisa del Carmen #2</td></tr>
-        </table>
-
-        <div class="lists-container">
-            <div>
-                <h3>Hobbies</h3>
-                <ul>
-                    <li>Fotografía</li>
-                    <li>Música</li>
-                    <li>Ver Partidos</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Mis Metas</h3>
-                <ol>
-                    <li>Graduarme</li>
-                    <li>Emprendimiento propio</li>
-                    <li>Independencia</li>
-                </ol>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </div>
 
 </body>
