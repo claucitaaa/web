@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>𝙉𝙪𝙚𝙨𝙩𝙧𝙖 𝙥𝙖𝙜𝙞𝙣𝙖 𝙬𝙚𝙗 ♥︎</title>
+    <style>
+        /* Color de texto base cambiado a blanco (#fff) */
+        body { margin: 0; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; background: #fff; color: #fff; }
+        .v-fondo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; object-fit: cover; opacity: 0.8; }
+
+        .main { display: flex; gap: 20px; width: 95%; max-width: 1100px; }
+        .card { 
+            flex: 1; padding: 25px; border-radius: 20px; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: 0.4s; opacity: 0; animation: subir 0.8s forwards;
+        }
+        
+        @keyframes subir { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        
+        /* Ajuste de hover para mantener legibilidad */
+        .card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.3); }
+
+        /* Colores de tarjetas con mayor saturación para que el blanco resalte */
+        .azul { background: rgba(93, 118, 169, 0.45); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .rosa { background: rgba(242, 162, 177, 0.45); border: 1px solid rgba(255, 255, 255, 0.3); }
+
+        /* Contenido */
+        .foto { width: 100px; height: 100px; border-radius: 15px; object-fit: cover; border: 2px solid #fff; transition: 0.4s; margin-bottom: 10px; }
+        .card:hover .foto { border-radius: 50%; border-color: #fff; }
+
+        h2 { margin: 5px 0; font-size: 1.4rem; color: #fff; }
+        p, ul, li, strong { color: #fff; }
+        
+        /* Tablas adaptadas al color blanco */
+        table { width: 100%; margin-top: 15px; border-collapse: collapse; background: rgba(255,255,255,0.15); border-radius: 8px; overflow: hidden; font-size: 12px; color: #fff; }
+        th { background: rgba(255,255,255,0.25); padding: 8px; text-align: left; color: #fff; }
+        td { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 5px 8px; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline class="v-fondo">
+        <source src="v.mp4" type="video/mp4">
+    </video>
+
+    <div class="main">
+        <div class="card azul">
+            <img src="abi.jpg" class="foto">
+            <h2>Astrid Abigail Aguilera Ramos</h2>
+            <p style="font-size:15px">Nacida el 20 Diciembre 2008<br>Tengo 17 años<br>Vivo en Col. Brisa del Carmen #2<br></p>
+            <strong>Hobbies:</strong>
+            <ul style="font-size: 14px; margin-bottom: 10px;">
+                <li>Ver Partidos</li>
+                <li>Escuchar Música</li>
+                <li>Tomar fotográfias</li>
+                <li>Ver películas/series</li>
+            </ul>
+            <table>
+                <tr><th>Mis Metas</th></tr>
+                <tr><td>Graduarme</td></tr>
+                <tr><td>Tener mi propia casa</td></tr>
+                <tr><td>Tener mi carro y pues una moto</td></tr>
+                <tr><td>Darles lo mejor a mis padres</td></tr>
+                <tr><td>Tener mi propio emprendimiento</td></tr>
+                <tr><td>Ser mejor persona</td></tr>
+                <tr><td>Tener un buen estatus económico para ayudar</td></tr>
+                <tr><td>Tener salud siempre</td></tr>
+            </table>
+        </div>
+
+        <div class="card rosa">
+            <img src="clau.jpg" class="foto">
+            <h2>Claudia Maria Cruz Reyes</h2>
+            <p style="font-size:15px">Nacida el 27 de junio de 2009<br>Tengo 16 años<br>Vivo en Col. Satelite<br></p>
+            <strong>Hobbies:</strong>
+            <ul style="font-size: 14px; margin-bottom: 10px;">
+                <li>Pintar y dibujar</li>
+                <li>Viajar y caminar</li>
+                <li>Decorar</li>
+                <li>Comprar cosas</li>
+            </ul>
+            <table>
+                <tr><th>Mis Metas</th></tr>
+                <tr><td>Ser alguien exitosa</td></tr>
+                <tr><td>Culminar mis estudios</td></tr>
+                <tr><td>Ayudar a mis padres y familia</td></tr>
+                <tr><td>Tener una familia</td></tr>
+                <tr><td>Superarme cada día como persona</td></tr>
+                <tr><td>Mejorar al expresar sentimientos en el arte</td></tr>
+                <tr><td>Terminar de ver mis kdramas pendientes</td></tr>
+                <tr><td>Tener mis cosas propias</td></tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
